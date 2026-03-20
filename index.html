@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Práctica HTML y CSS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="#">
+          <h1>GDN-e</h1>
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#articles">Artículos</a></li>
+          <li><a href="#gallery">Multimedia</a></li>
+          <li><a href="#data">Datos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <div class="theme-switcher">
+          <label for="theme-select" class="visually-hidden">Tema:</label>
+          <select id="theme-select" class="theme-select" onchange="changeTheme(this.value)" aria-label="Cambiar tema">
+            <option value="system">🖥️ Sistema</option>
+            <option value="light">☀️ Claro</option>
+            <option value="dark">🌙 Oscuro</option>
+          </select>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        <h2>Explora el Poder de HTML5 y CSS3</h2>
+        <p>Plantilla completa para experimentar con elementos semánticos, Flexbox, y CSS Grid.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary">Comenzar</button>
+          <button class="btn btn-secondary">Saber más</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container main-layout">
+      <aside class="sidebar">
+        <div class="widget profile-widget" aria-hidden="true">
+          <svg viewBox="0 0 500 500" class="stroke-dasharray avatar">
+            <text x="50%" y="35%" text-anchor="middle" dominant-baseline="middle">NTT</text>
+            <text x="50%" y="65%" text-anchor="middle" dominant-baseline="middle">DATA</text>
+          </svg>
+          <h3>Sobre este recurso</h3>
+          <p>Crea este SVG y dale una animacion con CSS</p>
+        </div>
+
+        <div class="widget links-widget">
+          <h3>Recursos de Aprendizaje</h3>
+          <ul>
+            <li><a href="https://lenguajehtml.com/" target="_blank">HTML</a></li>
+            <li><a href="https://lenguajecss.com/css/" target="_blank">CSS</a></li>
+            <li><a href="https://lenguajecss.com/animaciones/" target="_blank">Animaciones</a></li>
+          </ul>
+        </div>
+      </aside>
+      <div class="content-wrapper">
+        <section id="articles" class="articles-section">
+          <header class="section-header">
+            <h2>Últimos Artículos</h2>
+            <p>Descubre nuevas técnicas y metodologías.</p>
+          </header>
+          <div class="tabs-container">
+            <!-- Radio buttons act as state controllers -->
+            <input type="radio" id="tab1" name="article-tabs" class="tab-radio" checked />
+            <input type="radio" id="tab2" name="article-tabs" class="tab-radio" />
+
+            <!-- Navigation Labels -->
+            <div class="tabs-nav">
+              <label for="tab1" class="tab-label">Cards Clásicas</label>
+              <label for="tab2" class="tab-label">Cards Giratorias (Flip)</label>
+            </div>
+
+            <!-- Content Panels -->
+            <div class="tabs-content">
+              <!-- Tab 1: Clásicas -->
+              <div id="content-tab1" class="tab-panel">
+                <div class="grid-cards">
+                  <article class="card">
+                    <figure>
+                      <img src="https://picsum.photos/400/250?random=1" alt="Card" />
+                      <figcaption>Card</figcaption>
+                    </figure>
+                    <div class="card-content">
+                      <h3>Maquetación de Card</h3>
+                      <p>Haz estas dos cards con la misma estructura.</p>
+                      <a href="#" class="read-more">Leer artículo &rarr;</a>
+                    </div>
+                  </article>
+                  <article class="card">
+                    <figure>
+                      <img src="https://picsum.photos/400/250?random=2" alt="CSS Grid" />
+                      <figcaption>Estilos</figcaption>
+                    </figure>
+                    <div class="card-content">
+                      <h3>CSS Grid</h3>
+                      <p> Al hacer hover se mueve la tarjeta
+                        ligeramente hacia arriba y la
+                        imagen se amplía un poco.</p>
+                      <a href="#" class="read-more">Leer artículo &rarr;</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <!-- Tab 2: Flip Cards -->
+              <div id="content-tab2" class="tab-panel">
+                <div class="grid-cards">
+                  <article class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <figure>
+                          <img src="https://picsum.photos/400/250?random=4" alt="Flip 1" />
+                          <figcaption>Frente 1</figcaption>
+                        </figure>
+                        <div class="card-content">
+                          <h3>Descubre el reverso</h3>
+                          <p>Pasa el ratón (hover) para ver la parte trasera girando.</p>
+                        </div>
+                      </div>
+                      <div class="flip-card-back">
+                        <div class="card-content">
+                          <h3>¡Cara oculta!</h3>
+                          <p>Efecto flip</p>
+                          <a href="#" class="btn btn-secondary" style="margin-top: auto">Ver más</a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <figure>
+                          <img src="https://picsum.photos/400/250?random=5" alt="Flip 2" />
+                          <figcaption>Frente 2</figcaption>
+                        </figure>
+                        <div class="card-content">
+                          <h3>Interactividad CSS</h3>
+                          <p>Las animaciones en 3D enriquecen la experiencia web.</p>
+                        </div>
+                      </div>
+                      <div class="flip-card-back">
+                        <div class="card-content">
+                          <h3>Rotación Y</h3>
+                          <p>La carta rota sobre el eje Y.</p>
+                          <a href="#" class="btn btn-primary" style="margin-top: auto">Fantástico</a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carrusel Puro CSS -->
+          <div class="carousel-container" aria-label="Carrusel de imágenes">
+            <input type="radio" name="carousel" id="carousel-slide1" class="carousel-radio" checked>
+            <input type="radio" name="carousel" id="carousel-slide2" class="carousel-radio">
+            <input type="radio" name="carousel" id="carousel-slide3" class="carousel-radio">
+            <input type="radio" name="carousel" id="carousel-slide4" class="carousel-radio">
+            <input type="radio" name="carousel" id="carousel-slide5" class="carousel-radio">
+
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <img src="https://picsum.photos/800/400?random=30" alt="Slide 1">
+              </div>
+              <div class="carousel-slide">
+                <img src="https://picsum.photos/800/400?random=31" alt="Slide 2">
+              </div>
+              <div class="carousel-slide">
+                <img src="https://picsum.photos/800/400?random=32" alt="Slide 3">
+              </div>
+              <div class="carousel-slide">
+                <img src="https://picsum.photos/800/400?random=33" alt="Slide 4">
+              </div>
+              <div class="carousel-slide">
+                <img src="https://picsum.photos/800/400?random=34" alt="Slide 5">
+              </div>
+            </div>
+
+            <div class="carousel-arrows">
+              <label for="carousel-slide5" class="carousel-arrow carousel-arrow-prev arrow-for-slide1" aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide2" class="carousel-arrow carousel-arrow-next arrow-for-slide1" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+
+              <label for="carousel-slide1" class="carousel-arrow carousel-arrow-prev arrow-for-slide2" aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide3" class="carousel-arrow carousel-arrow-next arrow-for-slide2" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+
+              <label for="carousel-slide2" class="carousel-arrow carousel-arrow-prev arrow-for-slide3" aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide4" class="carousel-arrow carousel-arrow-next arrow-for-slide3" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+
+              <label for="carousel-slide3" class="carousel-arrow carousel-arrow-prev arrow-for-slide4" aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide5" class="carousel-arrow carousel-arrow-next arrow-for-slide4" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+
+              <label for="carousel-slide4" class="carousel-arrow carousel-arrow-prev arrow-for-slide5" aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide1" class="carousel-arrow carousel-arrow-next arrow-for-slide5" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+            </div>
+
+            <div class="carousel-nav">
+              <label for="carousel-slide1" class="carousel-dot" aria-label="Ir a diapositiva 1"></label>
+              <label for="carousel-slide2" class="carousel-dot" aria-label="Ir a diapositiva 2"></label>
+              <label for="carousel-slide3" class="carousel-dot" aria-label="Ir a diapositiva 3"></label>
+              <label for="carousel-slide4" class="carousel-dot" aria-label="Ir a diapositiva 4"></label>
+              <label for="carousel-slide5" class="carousel-dot" aria-label="Ir a diapositiva 5"></label>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+          <header class="section-header">
+            <h2>Listas y Multimedia</h2>
+          </header>
+          <div class="features-wrapper">
+            <div class="feature-list">
+              <h3>Tecnologías</h3>
+              <ul class="custom-list">
+                <li>HTML5 Semántico</li>
+                <li>CSS Custom Properties, Flexbox, Grid</li>
+                <li>Accesibilidad: ARIA, Contrastes</li>
+              </ul>
+              <h3>Formatos (Ordenada)</h3>
+              <ol class="styled-list">
+                <li>Imágenes (WebP, AVIF)</li>
+                <li>Video (MP4, WebM)</li>
+                <li>Audio (MP3, OGG)</li>
+              </ol>
+              <h3 style="margin-top: 1.5rem">Glosario (Definición)</h3>
+              <dl class="definition-list">
+                <dt>HTML5</dt>
+                <dd>Lenguaje de marcado para estructurar la web.</dd>
+                <dt>CSS3</dt>
+                <dd>Hojas de estilo para el diseño visual y adaptativo.</dd>
+                <dt>A11y</dt>
+                <dd>Accesibilidad e inclusión en el desarrollo web.</dd>
+              </dl>
+            </div>
+            <div class="feature-media">
+              <h3>Video Incrustado</h3>
+              <div class="video-container">
+                <video controls poster="https://picsum.photos/600/350?random=4">
+                  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                  Tu navegador no soporta el video.
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="data" class="data-section">
+          <header class="section-header">
+            <h2>Tabla de Datos</h2>
+          </header>
+          <div class="table-responsive">
+            <table class="data-table">
+              <caption>
+                Estadísticas Ficticias
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Navegador</th>
+                  <th scope="col">Motor</th>
+                  <th scope="col">Soporte</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Chrome</th>
+                  <td>Blink</td>
+                  <td><span class="status-badge success">Excelente</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Safari</th>
+                  <td>WebKit</td>
+                  <td><span class="status-badge success">Bueno</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Firefox</th>
+                  <td>Gecko</td>
+                  <td><span class="status-badge success">Excelente</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="contact" class="form-section">
+          <header class="section-header">
+            <h2>Formularios de Contacto Avanzado</h2>
+          </header>
+          <form action="#" method="GET" class="contact-form">
+            <fieldset>
+              <legend>Información Personal</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nombre <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dob">Nacimiento</label>
+                  <input type="date" id="dob" name="dob" />
+                </div>
+                <div class="form-group">
+                  <label for="website">Web</label>
+                  <input type="url" id="website" name="website" />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Preferencias y Mensaje</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="topic">Motivo</label>
+                  <select id="topic" name="topic">
+                    <option value="" disabled selected>Selecciona...</option>
+                    <optgroup label="Cliente">
+                      <option value="soporte">Soporte</option>
+                      <option value="ventas">Ventas</option>
+                    </optgroup>
+                    <optgroup label="General">
+                      <option value="otros">Otros</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <div class="form-group options-group">
+                  <span>Urgencia:</span>
+                  <div class="radio-group">
+                    <label class="radio-label"> <input type="radio" name="urgency" value="baja" checked /> Baja </label>
+                    <label class="radio-label"> <input type="radio" name="urgency" value="alta" /> Alta </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+              </div>
+
+              <div class="form-group form-group-checkbox mt-sm">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" value="yes" checked />
+                  Boletín semanal
+                </label>
+              </div>
+              <div class="form-group form-group-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="terms" value="accepted" required />
+                  Acepto política de privacidad <span class="required">*</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button type="reset" class="btn btn-secondary btn-outline">Restablecer</button>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h4>WebLab UI</h4>
+        <p>Demostración integral de HTML5 y CSS3.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#articles">Blog</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <address>
+          <p>Calle Principal, 1<br />Madrid, 28001</p>
+          <p>Email: hello@weblab.test</p>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <time datetime="2026">2026</time> WebLab. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const themeSelect = document.getElementById('theme-select');
+    const themeKey = 'preferencia-tema-weblab';
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+
+    function changeTheme(theme) {
+      applyTheme(theme);
+      localStorage.setItem(themeKey, theme);
+      themeSelect.value = theme;
+    }
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem(themeKey) || 'system';
+      changeTheme(savedTheme);
+    }
+
+    // Iniciar el tema al cargar
+    initTheme();
+
+    // Escuchar cambios nativos del SO (Modo nocturno)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      const currentTheme = localStorage.getItem(themeKey);
+      if (!currentTheme || currentTheme === 'system') {
+        // Forzar redibujado bajo "system"
+        applyTheme('system');
+      }
+    });
+  </script>
+</body>
+
+</html>

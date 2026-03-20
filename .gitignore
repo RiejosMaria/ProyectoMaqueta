@@ -1,0 +1,9 @@
+#Build
+node_modules
+dist
+package-lock.json
+*.local
+prettierrc
+
+# Chromium browser
+/chromium-win64/
