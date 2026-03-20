@@ -4,6 +4,8 @@ dist
 package-lock.json
 *.local
 prettierrc
+desktop.ini
+.vscode
 
 # Chromium browser
 /chromium-win64/

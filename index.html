@@ -17,8 +17,11 @@
           <h1>GDN-e</h1>
         </a>
       </div>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
       <nav class="main-nav" aria-label="Navegación principal">
-        <ul>
+        <ul class="nav-list">
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#articles">Artículos</a></li>
           <li><a href="#gallery">Multimedia</a></li>
@@ -40,11 +43,12 @@
   <main id="main-content">
     <section id="hero" class="hero-section">
       <div class="container hero-content">
-        <h2>Explora el Poder de HTML5 y CSS3</h2>
-        <p>Plantilla completa para experimentar con elementos semánticos, Flexbox, y CSS Grid.</p>
+        <span class="hero-subtitle">EDITORIAL DIGITAL PREMIUM</span>
+        <h2 class="hero-title">Explora el Poder de <span class="text-gradient">HTML5 y CSS3</span></h2>
+        <p class="hero-description">Descubre las últimas tendencias en desarrollo web moderno, desde animaciones fluidas hasta grids complejos que desafían lo convencional.</p>
         <div class="hero-actions">
-          <button class="btn btn-primary">Comenzar</button>
-          <button class="btn btn-secondary">Saber más</button>
+          <button class="btn btn-hero-primary">Comenzar</button>
+          <button class="btn btn-hero-secondary">Saber más</button>
         </div>
       </div>
     </section>
@@ -88,6 +92,8 @@
 
             <!-- Content Panels -->
             <div class="tabs-content">
+              <p>Tenemos un componente tab que funciona sin JavaScript.</p>
+              <p class="mb-1">Dentro de cada tab añadimos cards.</p>
               <!-- Tab 1: Clásicas -->
               <div id="content-tab1" class="tab-panel">
                 <div class="grid-cards">
@@ -98,7 +104,7 @@
                     </figure>
                     <div class="card-content">
                       <h3>Maquetación de Card</h3>
-                      <p>Haz estas dos cards con la misma estructura.</p>
+                      <p>Aquí tenemos un grid de cards con imagen, título, texto y link</p>
                       <a href="#" class="read-more">Leer artículo &rarr;</a>
                     </div>
                   </article>
@@ -108,10 +114,9 @@
                       <figcaption>Estilos</figcaption>
                     </figure>
                     <div class="card-content">
-                      <h3>CSS Grid</h3>
-                      <p> Al hacer hover se mueve la tarjeta
-                        ligeramente hacia arriba y la
-                        imagen se amplía un poco.</p>
+                      <h3>CSS</h3>
+                      <p>Al hacer hover sobre la card se mueve la tarjeta ligeramente hacia arriba y la imagen se amplía
+                        un poco.</p>
                       <a href="#" class="read-more">Leer artículo &rarr;</a>
                     </div>
                   </article>
@@ -171,45 +176,57 @@
 
           <!-- Carrusel Puro CSS -->
           <div class="carousel-container" aria-label="Carrusel de imágenes">
-            <input type="radio" name="carousel" id="carousel-slide1" class="carousel-radio" checked>
-            <input type="radio" name="carousel" id="carousel-slide2" class="carousel-radio">
-            <input type="radio" name="carousel" id="carousel-slide3" class="carousel-radio">
-            <input type="radio" name="carousel" id="carousel-slide4" class="carousel-radio">
-            <input type="radio" name="carousel" id="carousel-slide5" class="carousel-radio">
+            <p>Tenemos un componente Carrusel que funciona sin JavaScript.</p>
+            <p class="mb-1">Tiene tanto bullets como botones para desplazar las imágenes.</p>
+            <input type="radio" name="carousel" id="carousel-slide1" class="carousel-radio" checked />
+            <input type="radio" name="carousel" id="carousel-slide2" class="carousel-radio" />
+            <input type="radio" name="carousel" id="carousel-slide3" class="carousel-radio" />
+            <input type="radio" name="carousel" id="carousel-slide4" class="carousel-radio" />
+            <input type="radio" name="carousel" id="carousel-slide5" class="carousel-radio" />
 
             <div class="carousel-slides">
               <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=30" alt="Slide 1">
+                <img src="https://picsum.photos/800/400?random=30" alt="Slide 1" />
               </div>
               <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=31" alt="Slide 2">
+                <img src="https://picsum.photos/800/400?random=31" alt="Slide 2" />
               </div>
               <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=32" alt="Slide 3">
+                <img src="https://picsum.photos/800/400?random=32" alt="Slide 3" />
               </div>
               <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=33" alt="Slide 4">
+                <img src="https://picsum.photos/800/400?random=33" alt="Slide 4" />
               </div>
               <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=34" alt="Slide 5">
+                <img src="https://picsum.photos/800/400?random=34" alt="Slide 5" />
               </div>
             </div>
 
             <div class="carousel-arrows">
-              <label for="carousel-slide5" class="carousel-arrow carousel-arrow-prev arrow-for-slide1" aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide2" class="carousel-arrow carousel-arrow-next arrow-for-slide1" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+              <label for="carousel-slide5" class="carousel-arrow carousel-arrow-prev arrow-for-slide1"
+                aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide2" class="carousel-arrow carousel-arrow-next arrow-for-slide1"
+                aria-label="Ir a diapositiva siguiente">&#10095;</label>
 
-              <label for="carousel-slide1" class="carousel-arrow carousel-arrow-prev arrow-for-slide2" aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide3" class="carousel-arrow carousel-arrow-next arrow-for-slide2" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+              <label for="carousel-slide1" class="carousel-arrow carousel-arrow-prev arrow-for-slide2"
+                aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide3" class="carousel-arrow carousel-arrow-next arrow-for-slide2"
+                aria-label="Ir a diapositiva siguiente">&#10095;</label>
 
-              <label for="carousel-slide2" class="carousel-arrow carousel-arrow-prev arrow-for-slide3" aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide4" class="carousel-arrow carousel-arrow-next arrow-for-slide3" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+              <label for="carousel-slide2" class="carousel-arrow carousel-arrow-prev arrow-for-slide3"
+                aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide4" class="carousel-arrow carousel-arrow-next arrow-for-slide3"
+                aria-label="Ir a diapositiva siguiente">&#10095;</label>
 
-              <label for="carousel-slide3" class="carousel-arrow carousel-arrow-prev arrow-for-slide4" aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide5" class="carousel-arrow carousel-arrow-next arrow-for-slide4" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+              <label for="carousel-slide3" class="carousel-arrow carousel-arrow-prev arrow-for-slide4"
+                aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide5" class="carousel-arrow carousel-arrow-next arrow-for-slide4"
+                aria-label="Ir a diapositiva siguiente">&#10095;</label>
 
-              <label for="carousel-slide4" class="carousel-arrow carousel-arrow-prev arrow-for-slide5" aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide1" class="carousel-arrow carousel-arrow-next arrow-for-slide5" aria-label="Ir a diapositiva siguiente">&#10095;</label>
+              <label for="carousel-slide4" class="carousel-arrow carousel-arrow-prev arrow-for-slide5"
+                aria-label="Ir a diapositiva anterior">&#10094;</label>
+              <label for="carousel-slide1" class="carousel-arrow carousel-arrow-next arrow-for-slide5"
+                aria-label="Ir a diapositiva siguiente">&#10095;</label>
             </div>
 
             <div class="carousel-nav">
@@ -220,6 +237,158 @@
               <label for="carousel-slide5" class="carousel-dot" aria-label="Ir a diapositiva 5"></label>
             </div>
           </div>
+
+          <!-- Bento Grid Section -->
+          <section class="bento-section">
+            <div class="bento-header">
+              <h2>Últimos Artículos</h2>
+              <a href="#" class="bento-link">Ver todo</a>
+            </div>
+
+            <div class="bento-grid">
+              <!-- Left Large Card -->
+              <article class="bento-card bento-main">
+                <div class="bento-overlay">
+                  <span class="bento-tag">TENDENCIAS 2024</span>
+                  <h3>Dominando el Grid Layout en Interfaces Complejas</h3>
+                  <p>Cómo estructurar diseños asimétricos manteniendo la accesibilidad y el rendimiento.</p>
+                  <a href="#" class="bento-read">Leer artículo →</a>
+                </div>
+              </article>
+
+              <!-- Right Top Card -->
+              <article class="bento-card bento-side">
+                <div class="bento-side-image">
+                  <img src="https://picsum.photos/400/220?random=55" alt="El Renacimiento de CSS" />
+                </div>
+                <div class="bento-inner">
+                  <h3>El Renacimiento de CSS</h3>
+                  <p>Nuevas propiedades que están matando la necesidad de bibliotecas JS pesadas.</p>
+                  <a href="#" class="bento-read">Leer artículo ↗</a>
+                </div>
+              </article>
+
+              <!-- Bottom Row -->
+              <article class="bento-card bento-small">
+                <div class="bento-small-thumb">
+                  <img src="https://picsum.photos/120/100?random=60" alt="Optimización HTML5" />
+                </div>
+                <div class="bento-inner">
+                  <h3>Optimización HTML5</h3>
+                  <p>Semántica pura para SEO.</p>
+                </div>
+              </article>
+
+              <article class="bento-card bento-small">
+                <div class="bento-small-thumb bento-small-thumb--icon">
+                  <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="8" y="8" width="28" height="28" rx="4" fill="rgba(255,255,255,0.2)" />
+                    <rect x="44" y="8" width="28" height="28" rx="4" fill="rgba(255,255,255,0.2)" />
+                    <rect x="8" y="44" width="28" height="28" rx="4" fill="rgba(255,255,255,0.2)" />
+                    <rect x="44" y="44" width="28" height="28" rx="4" fill="rgba(255,255,255,0.35)" />
+                  </svg>
+                </div>
+                <div class="bento-inner">
+                  <h3>Web Components</h3>
+                  <p>El futuro de la UI nativa.</p>
+                </div>
+              </article>
+
+              <article class="bento-card bento-small">
+                <div class="bento-small-thumb">
+                  <img src="https://picsum.photos/120/100?random=80" alt="Animaciones Lottie" />
+                </div>
+                <div class="bento-inner">
+                  <h3>Animaciones Lottie</h3>
+                  <p>Impacto sin peso extra.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Accordion Section -->
+          <section class="accordion-section">
+            <header class="section-header">
+              <h2>Preguntas Frecuentes</h2>
+              <p>Encuentra respuestas a las dudas más comunes sobre HTML y CSS.</p>
+            </header>
+
+            <div class="accordion">
+
+              <details class="accordion-item">
+                <summary class="accordion-summary">
+                  <span>¿Qué es CSS Grid y cuándo usarlo?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="accordion-body">
+                  <p>CSS Grid es un sistema de maquetación bidimensional que permite controlar filas <em>y</em> columnas
+                    al mismo tiempo. Es ideal cuando necesitas estructuras complejas como layouts de página, bento grids
+                    o cualquier diseño donde los elementos deben alinearse en dos ejes.</p>
+                  <p>Usa Grid cuando el diseño dicta la estructura; usa Flexbox cuando el contenido la dicta.</p>
+                </div>
+              </details>
+
+              <details class="accordion-item">
+                <summary class="accordion-summary">
+                  <span>¿Cómo funcionan las CSS Custom Properties?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="accordion-body">
+                  <p>Las Custom Properties (variables CSS) se declaran con el prefijo <code>--</code> dentro de un
+                    selector, habitualmente <code>:root</code>, y se consumen con la función <code>var()</code>. Son en
+                    cascada como cualquier otra propiedad y se pueden sobreescribir en selectores hijos.</p>
+                  <pre><code>:root { --color-primary: #4338ca; }
+button { background: var(--color-primary); }</code></pre>
+                </div>
+              </details>
+
+              <details class="accordion-item">
+                <summary class="accordion-summary">
+                  <span>¿Qué diferencia hay entre <code>em</code> y <code>rem</code>?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="accordion-body">
+                  <p><strong><code>em</code></strong> es relativo al <code>font-size</code> del elemento padre más
+                    cercano. Esto puede acumularse si hay varios niveles de anidamiento, generando resultados
+                    inesperados.</p>
+                  <p><strong><code>rem</code></strong> (root em) siempre es relativo al <code>font-size</code> del
+                    elemento raíz (<code>&lt;html&gt;</code>), lo que lo hace mucho más predecible y es la unidad
+                    recomendada para espaciados y tipografía.</p>
+                </div>
+              </details>
+
+              <details class="accordion-item">
+                <summary class="accordion-summary">
+                  <span>¿Qué son los elementos semánticos de HTML5?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="accordion-body">
+                  <p>Son etiquetas que describen el significado del contenido que encierran, no solo su apariencia.
+                    Ejemplos: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+                    <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code> y
+                    <code>&lt;footer&gt;</code>.</p>
+                  <p>Beneficios clave: mejoran la accesibilidad (lectores de pantalla), favorecen el SEO y hacen el
+                    código más legible y mantenible.</p>
+                </div>
+              </details>
+
+              <details class="accordion-item">
+                <summary class="accordion-summary">
+                  <span>¿Cómo crear animaciones sin JavaScript?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="accordion-body">
+                  <p>CSS ofrece dos mecanismos principales: <strong>Transitions</strong>, para animar cambios de estado
+                    (hover, focus…), y <strong>Animations</strong> con <code>@keyframes</code>, para animaciones
+                    continuas o más complejas.</p>
+                  <p>Para interactividad sin JS puedes combinar <code>:checked</code> en inputs ocultos con el selector
+                    <code>~</code> (hermano general) o <code>+</code> (hermano adyacente), como se hace en los tabs y el
+                    carrusel de esta misma página.</p>
+                </div>
+              </details>
+
+            </div>
+          </section>
         </section>
 
         <section id="gallery" class="gallery-section">
@@ -434,13 +603,13 @@
     // Iniciar el tema al cargar
     initTheme();
 
-    // Escuchar cambios nativos del SO (Modo nocturno)
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      const currentTheme = localStorage.getItem(themeKey);
-      if (!currentTheme || currentTheme === 'system') {
-        // Forzar redibujado bajo "system"
-        applyTheme('system');
-      }
+    // Toggle menú hamburguesa
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
     });
   </script>
 </body>
