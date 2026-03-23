@@ -1,0 +1,46 @@
+/* =========================================
+   Scroll Reveal Component (Pure CSS)
+   ========================================= */
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.reveal-on-scroll {
+  /* Default state for browsers without view-timeline support */
+  opacity: 1;
+}
+
+/* Modern CSS Scroll-driven animations */
+@supports (animation-timeline: view()) {
+  .reveal-on-scroll {
+    animation-name: reveal-up;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-timeline: view();
+    /* animation-range: entry <start> <end>; */
+    /* entry 10%: starts when 10% of the element enters the view */
+    /* cover 30%: finishes when 30% of the element is within the view */
+    animation-range: entry 10% cover 35%;
+  }
+}
+
+/* Specific delay for sequential elements if needed */
+.sidebar .widget:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+/* Ensure that hero starts visible if it's already in the viewport */
+#hero.reveal-on-scroll {
+  animation-range: entry 0% cover 10%;
+}

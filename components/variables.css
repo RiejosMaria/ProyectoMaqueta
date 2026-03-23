@@ -1,0 +1,41 @@
+/* Variables y temas globales */
+:root {
+    --primary: #4338ca;
+    --primary-dark: #3730a3;
+    --secondary: #0284c7;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --title: #1e293b;
+    --text-muted: #475569;
+    --text-light: #ffffff;
+    --border: #e2e8f0;
+    --success: #059669;
+    --warning: #f59e0b;
+    --error: #dc2626;
+    --radius: 8px;
+}
+
+[data-theme="dark"] {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --text: #f8fafc;
+    --title: #98999a;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --primary: #818cf8;
+    --primary-dark: #a5b4fc;
+}
+
+@media (prefers-color-scheme: dark) {
+    [data-theme="system"] {
+        --bg: #0f172a;
+        --surface: #1e293b;
+        --text: #f8fafc;
+        --title: #94a3b8;
+        --text-muted: #94a3b8;
+        --border: #334155;
+        --primary: #818cf8;
+        --primary-dark: #a5b4fc;
+    }
+}

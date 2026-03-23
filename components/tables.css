@@ -29,7 +29,7 @@
 .data-table thead th {
     background: var(--bg);
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 1rem;
     letter-spacing: 0.05em;
     color: var(--text);
 }
@@ -52,6 +52,11 @@
 .status-badge.success {
     background: rgba(16, 185, 129, 0.1);
     color: var(--success);
+}
+
+.status-badge.warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
 }
 
 .status-badge.error {

@@ -1,0 +1,17 @@
+/* Layout Grid */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+@media (min-width: 992px) {
+    .main-layout {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+.content-wrapper>section {
+    margin-bottom: 5rem;
+}

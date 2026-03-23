@@ -15,12 +15,12 @@ fieldset {
 }
 
 legend {
-    background: var(--primary);
-    color: var(--text-light);
-    padding: 0.25rem 1rem;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.9rem;
+    background: transparent;
+    color: var(--primary);
+    padding: 0 0.75rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .form-row {
@@ -44,7 +44,7 @@ legend {
 .form-group label {
     margin-bottom: 0.5rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .required {
@@ -68,6 +68,12 @@ textarea {
     color: var(--text);
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -78,7 +84,6 @@ textarea:focus {
 
 .options-group span {
     font-weight: 600;
-    font-size: 0.9rem;
     display: block;
     margin-bottom: 0.5rem;
 }
@@ -94,7 +99,6 @@ textarea:focus {
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-    font-size: 0.95rem;
 }
 
 .mt-sm {

@@ -1,0 +1,84 @@
+/* Sidebar y Widgets */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: start;
+}
+
+.widget {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.widget h3 {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Profile Widget */
+.profile-widget {
+    text-align: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 3px solid #e0e7ff;
+    background-color: var(--primary);
+}
+
+.stroke-dasharray {
+    display: block;
+    margin: 0 auto;
+}
+
+text {
+    font-size: 150px;
+    font-family: Arial, sans-serif;
+    fill: transparent;
+    stroke: #e0e7ff;
+    stroke-width: 4;
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+    animation: dibujarTexto 4s infinite;
+}
+
+@keyframes dibujarTexto {
+    0% {
+        stroke-dashoffset: 700;
+        fill: transparent;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+
+    75%,
+    100% {
+        stroke-dashoffset: 0;
+        fill: #e0e7ff;
+    }
+}
+
+/* Links Widget */
+.links-widget ul {
+    list-style: none;
+}
+
+.links-widget li {
+    margin-bottom: 0.75rem;
+}
+
+.links-widget li::before {
+    content: '→';
+    color: var(--primary);
+    margin-right: 0.5rem;
+    font-weight: bold;
+}

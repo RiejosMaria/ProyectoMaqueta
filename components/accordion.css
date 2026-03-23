@@ -1,0 +1,139 @@
+/* Accordion Component (Pure HTML – details/summary) */
+.accordion-section {
+    margin-bottom: 5rem;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Remove native triangle marker */
+.accordion-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-item[open] {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary), 0 4px 16px rgba(67, 56, 202, 0.12);
+}
+
+/* Summary row */
+.accordion-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text);
+    list-style: none;
+    /* Firefox */
+    user-select: none;
+    gap: 1rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hide the default WebKit disclosure triangle */
+.accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-item[open] .accordion-summary {
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 6%, transparent);
+}
+
+/* Animated + / × icon */
+.accordion-icon {
+    flex-shrink: 0;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+    content: '';
+    position: absolute;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+    top: 50%;
+    left: 50%;
+}
+
+/* Horizontal bar */
+.accordion-icon::before {
+    width: 14px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+}
+
+/* Vertical bar */
+.accordion-icon::after {
+    width: 2px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+}
+
+/* When open: rotate vertical bar to form × */
+.accordion-item[open] .accordion-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+}
+
+.accordion-item[open] .accordion-icon::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+/* Body content */
+.accordion-body {
+    padding: 0 1.5rem 1.5rem;
+    animation: accordionOpen 0.3s ease;
+}
+
+.accordion-body code {
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+    color: var(--primary);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.accordion-body pre {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    margin-top: 0.75rem;
+    overflow-x: auto;
+}
+
+.accordion-body pre code {
+    background: none;
+    padding: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+@keyframes accordionOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

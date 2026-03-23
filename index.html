@@ -1,248 +1,268 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Práctica HTML y CSS</title>
+    <!-- Variables y tema -->
+    <link rel="stylesheet" href="components/imports.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página de Práctica HTML y CSS</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-  <header class="main-header">
-    <div class="container header-container">
-      <div class="logo">
-        <a href="#">
-          <h1>GDN-e</h1>
-        </a>
-      </div>
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="main-nav" aria-label="Navegación principal">
-        <ul class="nav-list">
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#articles">Artículos</a></li>
-          <li><a href="#gallery">Multimedia</a></li>
-          <li><a href="#data">Datos</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-        <div class="theme-switcher">
-          <label for="theme-select" class="visually-hidden">Tema:</label>
-          <select id="theme-select" class="theme-select" onchange="changeTheme(this.value)" aria-label="Cambiar tema">
-            <option value="system">🖥️ Sistema</option>
-            <option value="light">☀️ Claro</option>
-            <option value="dark">🌙 Oscuro</option>
-          </select>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <header class="main-header">
+      <div class="container header-container">
+        <div class="logo">
+          <a href="#">
+            <h1>GDN-e</h1>
+          </a>
         </div>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content">
-    <section id="hero" class="hero-section">
-      <div class="container hero-content">
-        <span class="hero-subtitle">EDITORIAL DIGITAL PREMIUM</span>
-        <h2 class="hero-title">Explora el Poder de <span class="text-gradient">HTML5 y CSS3</span></h2>
-        <p class="hero-description">Descubre las últimas tendencias en desarrollo web moderno, desde animaciones fluidas hasta grids complejos que desafían lo convencional.</p>
-        <div class="hero-actions">
-          <button class="btn btn-hero-primary">Comenzar</button>
-          <button class="btn btn-hero-secondary">Saber más</button>
-        </div>
-      </div>
-    </section>
-
-    <div class="container main-layout">
-      <aside class="sidebar">
-        <div class="widget profile-widget" aria-hidden="true">
-          <svg viewBox="0 0 500 500" class="stroke-dasharray avatar">
-            <text x="50%" y="35%" text-anchor="middle" dominant-baseline="middle">NTT</text>
-            <text x="50%" y="65%" text-anchor="middle" dominant-baseline="middle">DATA</text>
-          </svg>
-          <h3>Sobre este recurso</h3>
-          <p>Crea este SVG y dale una animacion con CSS</p>
-        </div>
-
-        <div class="widget links-widget">
-          <h3>Recursos de Aprendizaje</h3>
-          <ul>
-            <li><a href="https://lenguajehtml.com/" target="_blank">HTML</a></li>
-            <li><a href="https://lenguajecss.com/css/" target="_blank">CSS</a></li>
-            <li><a href="https://lenguajecss.com/animaciones/" target="_blank">Animaciones</a></li>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <ul class="nav-list">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#articles">Artículos</a></li>
+            <li><a href="#gallery">Multimedia</a></li>
+            <li><a href="#data">Datos</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
+          <div class="theme-switcher">
+            <label for="theme-select" class="visually-hidden">Tema:</label>
+            <select id="theme-select" class="theme-select" onchange="changeTheme(this.value)" aria-label="Cambiar tema">
+              <option value="system">🖥️ Sistema</option>
+              <option value="light">☀️ Claro</option>
+              <option value="dark">🌙 Oscuro</option>
+            </select>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="hero" class="hero-section reveal-on-scroll">
+        <div class="container hero-content">
+          <span class="hero-subtitle">Crafting the Modern Web</span>
+          <h2 class="hero-title">
+            Explora el Poder de<br />
+            <span class="text-gradient">HTML5 y CSS3</span>
+          </h2>
+          <p class="hero-description">
+            Descubre las últimas tendencias en desarrollo web moderno, desde animaciones fluidas hasta grids complejos que desafían lo convencional.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-hero-primary">Comenzar</button>
+            <button class="btn btn-hero-secondary">Saber más</button>
+          </div>
         </div>
-      </aside>
-      <div class="content-wrapper">
-        <section id="articles" class="articles-section">
-          <header class="section-header">
-            <h2>Últimos Artículos</h2>
-            <p>Descubre nuevas técnicas y metodologías.</p>
-          </header>
-          <div class="tabs-container">
-            <!-- Radio buttons act as state controllers -->
-            <input type="radio" id="tab1" name="article-tabs" class="tab-radio" checked />
-            <input type="radio" id="tab2" name="article-tabs" class="tab-radio" />
+      </section>
 
-            <!-- Navigation Labels -->
-            <div class="tabs-nav">
-              <label for="tab1" class="tab-label">Cards Clásicas</label>
-              <label for="tab2" class="tab-label">Cards Giratorias (Flip)</label>
-            </div>
+      <div class="container main-layout">
+        <aside class="sidebar">
+          <div class="widget profile-widget reveal-on-scroll" aria-hidden="true">
+            <svg viewBox="0 0 500 500" class="stroke-dasharray avatar">
+              <text x="50%" y="35%" text-anchor="middle" dominant-baseline="middle">NTT</text>
+              <text x="50%" y="65%" text-anchor="middle" dominant-baseline="middle">DATA</text>
+            </svg>
+            <h3>Sobre este recurso</h3>
+            <p class="paragraph">Crea este SVG y dale una animacion con CSS</p>
+          </div>
 
-            <!-- Content Panels -->
-            <div class="tabs-content">
-              <p>Tenemos un componente tab que funciona sin JavaScript.</p>
-              <p class="mb-1">Dentro de cada tab añadimos cards.</p>
-              <!-- Tab 1: Clásicas -->
-              <div id="content-tab1" class="tab-panel">
-                <div class="grid-cards">
-                  <article class="card">
-                    <figure>
-                      <img src="https://picsum.photos/400/250?random=1" alt="Card" />
-                      <figcaption>Card</figcaption>
-                    </figure>
-                    <div class="card-content">
-                      <h3>Maquetación de Card</h3>
-                      <p>Aquí tenemos un grid de cards con imagen, título, texto y link</p>
-                      <a href="#" class="read-more">Leer artículo &rarr;</a>
-                    </div>
-                  </article>
-                  <article class="card">
-                    <figure>
-                      <img src="https://picsum.photos/400/250?random=2" alt="CSS Grid" />
-                      <figcaption>Estilos</figcaption>
-                    </figure>
-                    <div class="card-content">
-                      <h3>CSS</h3>
-                      <p>Al hacer hover sobre la card se mueve la tarjeta ligeramente hacia arriba y la imagen se amplía
-                        un poco.</p>
-                      <a href="#" class="read-more">Leer artículo &rarr;</a>
-                    </div>
-                  </article>
-                </div>
+          <div class="widget links-widget reveal-on-scroll">
+            <h3>Recursos de Aprendizaje</h3>
+            <ul>
+              <li><a href="https://lenguajehtml.com/" target="_blank">HTML</a></li>
+              <li><a href="https://lenguajecss.com/css/" target="_blank">CSS</a></li>
+              <li><a href="https://lenguajecss.com/animaciones/" target="_blank">Animaciones</a></li>
+            </ul>
+          </div>
+        </aside>
+        <div class="content-wrapper">
+          <!-- List and multimedia -->
+          <section id="gallery" class="gallery-section reveal-on-scroll">
+            <header class="section-header">
+              <h2 class="title-md">Listas y Multimedia</h2>
+              <p class="paragraph">En HTML semántico existen tres formas diferentes de mostrar listas.</p>
+              <p class="paragraph">Decide cual usar en cada caso.</p>
+              <p class="paragraph">Añade un video funcional con un poster.</p>
+            </header>
+            <div class="features-wrapper">
+              <div class="feature-list">
+                <h3>Tecnologías</h3>
+                <ul class="custom-list">
+                  <li>HTML5 Semántico</li>
+                  <li>CSS Custom Properties, Flexbox, Grid</li>
+                  <li>Accesibilidad: ARIA, Contrastes</li>
+                </ul>
+                <h3>Formatos (Ordenada)</h3>
+                <ol class="styled-list">
+                  <li>Imágenes (WebP, AVIF)</li>
+                  <li>Video (MP4, WebM)</li>
+                  <li>Audio (MP3, OGG)</li>
+                </ol>
+                <h3 style="margin-top: 1.5rem">Glosario (Definición)</h3>
+                <dl class="definition-list">
+                  <dt>HTML5</dt>
+                  <dd>Lenguaje de marcado para estructurar la web.</dd>
+                  <dt>CSS3</dt>
+                  <dd>Hojas de estilo para el diseño visual y adaptativo.</dd>
+                  <dt>A11y</dt>
+                  <dd>Accesibilidad e inclusión en el desarrollo web.</dd>
+                </dl>
               </div>
-
-              <!-- Tab 2: Flip Cards -->
-              <div id="content-tab2" class="tab-panel">
-                <div class="grid-cards">
-                  <article class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                        <figure>
-                          <img src="https://picsum.photos/400/250?random=4" alt="Flip 1" />
-                          <figcaption>Frente 1</figcaption>
-                        </figure>
-                        <div class="card-content">
-                          <h3>Descubre el reverso</h3>
-                          <p>Pasa el ratón (hover) para ver la parte trasera girando.</p>
-                        </div>
-                      </div>
-                      <div class="flip-card-back">
-                        <div class="card-content">
-                          <h3>¡Cara oculta!</h3>
-                          <p>Efecto flip</p>
-                          <a href="#" class="btn btn-secondary" style="margin-top: auto">Ver más</a>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-
-                  <article class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                        <figure>
-                          <img src="https://picsum.photos/400/250?random=5" alt="Flip 2" />
-                          <figcaption>Frente 2</figcaption>
-                        </figure>
-                        <div class="card-content">
-                          <h3>Interactividad CSS</h3>
-                          <p>Las animaciones en 3D enriquecen la experiencia web.</p>
-                        </div>
-                      </div>
-                      <div class="flip-card-back">
-                        <div class="card-content">
-                          <h3>Rotación Y</h3>
-                          <p>La carta rota sobre el eje Y.</p>
-                          <a href="#" class="btn btn-primary" style="margin-top: auto">Fantástico</a>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
+              <div class="feature-media">
+                <h3>Video Incrustado</h3>
+                <div class="video-container">
+                  <video controls poster="https://picsum.photos/600/350?random=4">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                    Tu navegador no soporta el video.
+                  </video>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Carrusel Puro CSS -->
-          <div class="carousel-container" aria-label="Carrusel de imágenes">
-            <p>Tenemos un componente Carrusel que funciona sin JavaScript.</p>
-            <p class="mb-1">Tiene tanto bullets como botones para desplazar las imágenes.</p>
-            <input type="radio" name="carousel" id="carousel-slide1" class="carousel-radio" checked />
-            <input type="radio" name="carousel" id="carousel-slide2" class="carousel-radio" />
-            <input type="radio" name="carousel" id="carousel-slide3" class="carousel-radio" />
-            <input type="radio" name="carousel" id="carousel-slide4" class="carousel-radio" />
-            <input type="radio" name="carousel" id="carousel-slide5" class="carousel-radio" />
-
-            <div class="carousel-slides">
-              <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=30" alt="Slide 1" />
-              </div>
-              <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=31" alt="Slide 2" />
-              </div>
-              <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=32" alt="Slide 3" />
-              </div>
-              <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=33" alt="Slide 4" />
-              </div>
-              <div class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=34" alt="Slide 5" />
-              </div>
+          </section>
+          <!-- Table -->
+          <section id="data" class="data-section reveal-on-scroll">
+            <header class="section-header">
+              <h2 class="title-md">Tabla de Datos</h2>
+              <p class="paragraph">Haz una tabla semánticamente correcta.</p>
+              <p class="paragraph">PRO TIP: Ten en cuenta el orden de lectura.</p>
+            </header>
+            <div class="table-responsive">
+              <table class="data-table">
+                <caption class="sr-only">
+                  Estadísticas Ficticias
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Navegador</th>
+                    <th scope="col">Motor</th>
+                    <th scope="col">Soporte</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Chrome</th>
+                    <td>Blink</td>
+                    <td><span class="status-badge success">Bueno</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Safari</th>
+                    <td>WebKit</td>
+                    <td><span class="status-badge error">Error</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Firefox</th>
+                    <td>Gecko</td>
+                    <td><span class="status-badge warning">Precaución</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+          </section>
+          <!-- Form -->
+          <section id="contact" class="form-section reveal-on-scroll">
+            <header class="section-header">
+              <h2 class="title-md">Formularios de Contacto Avanzado</h2>
+              <p class="paragraph">Haz un formulariol semántico con todos los tipos de elementos que se te ocurran.</p>
+            </header>
+            <form action="#" method="GET" class="contact-form">
+              <fieldset>
+                <legend>Información Personal</legend>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Nombre <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="dob">Nacimiento</label>
+                    <input type="date" id="dob" name="dob" />
+                  </div>
+                  <div class="form-group">
+                    <label for="website">Web</label>
+                    <input type="url" id="website" name="website" />
+                  </div>
+                </div>
+              </fieldset>
 
-            <div class="carousel-arrows">
-              <label for="carousel-slide5" class="carousel-arrow carousel-arrow-prev arrow-for-slide1"
-                aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide2" class="carousel-arrow carousel-arrow-next arrow-for-slide1"
-                aria-label="Ir a diapositiva siguiente">&#10095;</label>
+              <fieldset>
+                <legend>Preferencias y Mensaje</legend>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="topic">Motivo</label>
+                    <select id="topic" name="topic">
+                      <option value="" disabled selected>Selecciona...</option>
+                      <optgroup label="Cliente">
+                        <option value="soporte">Soporte</option>
+                        <option value="ventas">Ventas</option>
+                      </optgroup>
+                      <optgroup label="General">
+                        <option value="otros">Otros</option>
+                      </optgroup>
+                    </select>
+                  </div>
 
-              <label for="carousel-slide1" class="carousel-arrow carousel-arrow-prev arrow-for-slide2"
-                aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide3" class="carousel-arrow carousel-arrow-next arrow-for-slide2"
-                aria-label="Ir a diapositiva siguiente">&#10095;</label>
+                  <div class="form-group options-group">
+                    <span>Urgencia:</span>
+                    <div class="radio-group">
+                      <label class="radio-label"> <input type="radio" name="urgency" value="baja" checked /> Baja </label>
+                      <label class="radio-label"> <input type="radio" name="urgency" value="alta" /> Alta </label>
+                    </div>
+                  </div>
+                </div>
 
-              <label for="carousel-slide2" class="carousel-arrow carousel-arrow-prev arrow-for-slide3"
-                aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide4" class="carousel-arrow carousel-arrow-next arrow-for-slide3"
-                aria-label="Ir a diapositiva siguiente">&#10095;</label>
+                <div class="form-group">
+                  <label for="message">Mensaje</label>
+                  <textarea id="message" name="message" rows="4"></textarea>
+                </div>
 
-              <label for="carousel-slide3" class="carousel-arrow carousel-arrow-prev arrow-for-slide4"
-                aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide5" class="carousel-arrow carousel-arrow-next arrow-for-slide4"
-                aria-label="Ir a diapositiva siguiente">&#10095;</label>
+                <div class="form-group form-group-checkbox mt-sm">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="newsletter" value="yes" checked />
+                    Boletín semanal
+                  </label>
+                </div>
+                <div class="form-group form-group-checkbox">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="terms" value="accepted" required />
+                    Acepto política de privacidad <span class="required">*</span>
+                  </label>
+                </div>
+              </fieldset>
 
-              <label for="carousel-slide4" class="carousel-arrow carousel-arrow-prev arrow-for-slide5"
-                aria-label="Ir a diapositiva anterior">&#10094;</label>
-              <label for="carousel-slide1" class="carousel-arrow carousel-arrow-next arrow-for-slide5"
-                aria-label="Ir a diapositiva siguiente">&#10095;</label>
+              <div class="form-actions">
+                <button type="reset" class="btn btn-secondary btn-outline">Restablecer</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+          </section>
+          <!-- Progress Bar -->
+          <section class="reveal-on-scroll">
+            <header>
+              <h2 class="title-md">Barra de Progreso</h2>
+              <p class="paragraph">Haz una barra de progreso que esté avanzada hasta el 80%</p>
+              <p class="paragraph">PUNTO EXTRA: Haz que el avance sea animado</p>
+            </header>
+            <div class="progress-container">
+              <div class="progress-bar" style="width: 20%"></div>
             </div>
-
-            <div class="carousel-nav">
-              <label for="carousel-slide1" class="carousel-dot" aria-label="Ir a diapositiva 1"></label>
-              <label for="carousel-slide2" class="carousel-dot" aria-label="Ir a diapositiva 2"></label>
-              <label for="carousel-slide3" class="carousel-dot" aria-label="Ir a diapositiva 3"></label>
-              <label for="carousel-slide4" class="carousel-dot" aria-label="Ir a diapositiva 4"></label>
-              <label for="carousel-slide5" class="carousel-dot" aria-label="Ir a diapositiva 5"></label>
-            </div>
-          </div>
-
-          <!-- Bento Grid Section -->
-          <section class="bento-section">
-            <div class="bento-header">
-              <h2>Últimos Artículos</h2>
+          </section>
+          <!-- Bento Grid -->
+          <section class="bento-section reveal-on-scroll">
+            <header class="bento-header">
+              <h2 class="title-md">Bento Grid</h2>
               <a href="#" class="bento-link">Ver todo</a>
+            </header>
+            <div>
+              <p class="paragraph">Crear un bento grid con 3 tipos de cards diferentes.</p>
+              <p class="paragraph">PRO TIP: Ten en cuenta el responsive.</p>
             </div>
 
             <div class="bento-grid">
@@ -251,8 +271,7 @@
                 <div class="bento-overlay">
                   <span class="bento-tag">TENDENCIAS 2024</span>
                   <h3>Dominando el Grid Layout en Interfaces Complejas</h3>
-                  <p>Cómo estructurar diseños asimétricos manteniendo la accesibilidad y el rendimiento.</p>
-                  <a href="#" class="bento-read">Leer artículo →</a>
+                  <p class="paragraph">Cómo estructurar diseños asimétricos manteniendo la accesibilidad y el rendimiento.</p>
                 </div>
               </article>
 
@@ -263,7 +282,7 @@
                 </div>
                 <div class="bento-inner">
                   <h3>El Renacimiento de CSS</h3>
-                  <p>Nuevas propiedades que están matando la necesidad de bibliotecas JS pesadas.</p>
+                  <p class="paragraph">Nuevas propiedades que están matando la necesidad de bibliotecas JS pesadas.</p>
                   <a href="#" class="bento-read">Leer artículo ↗</a>
                 </div>
               </article>
@@ -275,7 +294,7 @@
                 </div>
                 <div class="bento-inner">
                   <h3>Optimización HTML5</h3>
-                  <p>Semántica pura para SEO.</p>
+                  <p class="paragraph">Semántica pura para SEO.</p>
                 </div>
               </article>
 
@@ -290,7 +309,7 @@
                 </div>
                 <div class="bento-inner">
                   <h3>Web Components</h3>
-                  <p>El futuro de la UI nativa.</p>
+                  <p class="paragraph">El futuro de la UI nativa.</p>
                 </div>
               </article>
 
@@ -300,31 +319,31 @@
                 </div>
                 <div class="bento-inner">
                   <h3>Animaciones Lottie</h3>
-                  <p>Impacto sin peso extra.</p>
+                  <p class="paragraph">Impacto sin peso extra.</p>
                 </div>
               </article>
             </div>
           </section>
-
-          <!-- Accordion Section -->
-          <section class="accordion-section">
+          <!-- Accordion -->
+          <section class="accordion-section reveal-on-scroll">
             <header class="section-header">
-              <h2>Preguntas Frecuentes</h2>
-              <p>Encuentra respuestas a las dudas más comunes sobre HTML y CSS.</p>
+              <h2 class="title-md">Acordeón</h2>
+              <p class="paragraph">Haz un acordeón totalmente funcional solo con HTML y CSS.</p>
             </header>
 
             <div class="accordion">
-
               <details class="accordion-item">
                 <summary class="accordion-summary">
                   <span>¿Qué es CSS Grid y cuándo usarlo?</span>
                   <span class="accordion-icon" aria-hidden="true"></span>
                 </summary>
                 <div class="accordion-body">
-                  <p>CSS Grid es un sistema de maquetación bidimensional que permite controlar filas <em>y</em> columnas
-                    al mismo tiempo. Es ideal cuando necesitas estructuras complejas como layouts de página, bento grids
-                    o cualquier diseño donde los elementos deben alinearse en dos ejes.</p>
-                  <p>Usa Grid cuando el diseño dicta la estructura; usa Flexbox cuando el contenido la dicta.</p>
+                  <p class="paragraph">
+                    CSS Grid es un sistema de maquetación bidimensional que permite controlar filas <em>y</em> columnas al mismo tiempo. Es ideal
+                    cuando necesitas estructuras complejas como layouts de página, bento grids o cualquier diseño donde los elementos deben alinearse
+                    en dos ejes.
+                  </p>
+                  <p class="paragraph">Usa Grid cuando el diseño dicta la estructura; usa Flexbox cuando el contenido la dicta.</p>
                 </div>
               </details>
 
@@ -334,9 +353,11 @@
                   <span class="accordion-icon" aria-hidden="true"></span>
                 </summary>
                 <div class="accordion-body">
-                  <p>Las Custom Properties (variables CSS) se declaran con el prefijo <code>--</code> dentro de un
-                    selector, habitualmente <code>:root</code>, y se consumen con la función <code>var()</code>. Son en
-                    cascada como cualquier otra propiedad y se pueden sobreescribir en selectores hijos.</p>
+                  <p class="paragraph">
+                    Las Custom Properties (variables CSS) se declaran con el prefijo <code>--</code> dentro de un selector, habitualmente
+                    <code>:root</code>, y se consumen con la función <code>var()</code>. Son en cascada como cualquier otra propiedad y se pueden
+                    sobreescribir en selectores hijos.
+                  </p>
                   <pre><code>:root { --color-primary: #4338ca; }
 button { background: var(--color-primary); }</code></pre>
                 </div>
@@ -348,12 +369,14 @@ button { background: var(--color-primary); }</code></pre>
                   <span class="accordion-icon" aria-hidden="true"></span>
                 </summary>
                 <div class="accordion-body">
-                  <p><strong><code>em</code></strong> es relativo al <code>font-size</code> del elemento padre más
-                    cercano. Esto puede acumularse si hay varios niveles de anidamiento, generando resultados
-                    inesperados.</p>
-                  <p><strong><code>rem</code></strong> (root em) siempre es relativo al <code>font-size</code> del
-                    elemento raíz (<code>&lt;html&gt;</code>), lo que lo hace mucho más predecible y es la unidad
-                    recomendada para espaciados y tipografía.</p>
+                  <p class="paragraph">
+                    <strong><code>em</code></strong> es relativo al <code>font-size</code> del elemento padre más cercano. Esto puede acumularse si
+                    hay varios niveles de anidamiento, generando resultados inesperados.
+                  </p>
+                  <p class="paragraph">
+                    <strong><code>rem</code></strong> (root em) siempre es relativo al <code>font-size</code> del elemento raíz
+                    (<code>&lt;html&gt;</code>), lo que lo hace mucho más predecible y es la unidad recomendada para espaciados y tipografía.
+                  </p>
                 </div>
               </details>
 
@@ -363,12 +386,14 @@ button { background: var(--color-primary); }</code></pre>
                   <span class="accordion-icon" aria-hidden="true"></span>
                 </summary>
                 <div class="accordion-body">
-                  <p>Son etiquetas que describen el significado del contenido que encierran, no solo su apariencia.
-                    Ejemplos: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
-                    <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code> y
-                    <code>&lt;footer&gt;</code>.</p>
-                  <p>Beneficios clave: mejoran la accesibilidad (lectores de pantalla), favorecen el SEO y hacen el
-                    código más legible y mantenible.</p>
+                  <p class="paragraph">
+                    Son etiquetas que describen el significado del contenido que encierran, no solo su apariencia. Ejemplos:
+                    <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>,
+                    <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code> y <code>&lt;footer&gt;</code>.
+                  </p>
+                  <p>
+                    Beneficios clave: mejoran la accesibilidad (lectores de pantalla), favorecen el SEO y hacen el código más legible y mantenible.
+                  </p>
                 </div>
               </details>
 
@@ -378,240 +403,296 @@ button { background: var(--color-primary); }</code></pre>
                   <span class="accordion-icon" aria-hidden="true"></span>
                 </summary>
                 <div class="accordion-body">
-                  <p>CSS ofrece dos mecanismos principales: <strong>Transitions</strong>, para animar cambios de estado
-                    (hover, focus…), y <strong>Animations</strong> con <code>@keyframes</code>, para animaciones
-                    continuas o más complejas.</p>
-                  <p>Para interactividad sin JS puedes combinar <code>:checked</code> en inputs ocultos con el selector
-                    <code>~</code> (hermano general) o <code>+</code> (hermano adyacente), como se hace en los tabs y el
-                    carrusel de esta misma página.</p>
+                  <p class="paragraph">
+                    CSS ofrece dos mecanismos principales: <strong>Transitions</strong>, para animar cambios de estado (hover, focus…), y
+                    <strong>Animations</strong> con <code>@keyframes</code>, para animaciones continuas o más complejas.
+                  </p>
+                  <p>
+                    Para interactividad sin JS puedes combinar <code>:checked</code> en inputs ocultos con el selector <code>~</code> (hermano
+                    general) o <code>+</code> (hermano adyacente), como se hace en los tabs y el carrusel de esta misma página.
+                  </p>
                 </div>
               </details>
-
             </div>
           </section>
-        </section>
+          <!-- Tabs con card-grid -->
+          <section id="articles" class="articles-section reveal-on-scroll">
+            <header class="section-header">
+              <h2 class="title-md">Tabs con card-grid</h2>
+              <p class="paragraph">Haz tabs totalmente funcionales solo con HTML y CSS</p>
+              <p class="paragraph">Dentro de un tab, añade cards que amplíen su tamaño al hacer hover</p>
+              <p class="paragraph">Dentro de otro tab, añade cards que giren sobre sí mismas al hacer hover</p>
+            </header>
+            <div class="tabs-container">
+              <!-- Radio buttons act as state controllers -->
+              <input type="radio" id="tab1" name="article-tabs" class="tab-radio" checked />
+              <input type="radio" id="tab2" name="article-tabs" class="tab-radio" />
 
-        <section id="gallery" class="gallery-section">
-          <header class="section-header">
-            <h2>Listas y Multimedia</h2>
-          </header>
-          <div class="features-wrapper">
-            <div class="feature-list">
-              <h3>Tecnologías</h3>
-              <ul class="custom-list">
-                <li>HTML5 Semántico</li>
-                <li>CSS Custom Properties, Flexbox, Grid</li>
-                <li>Accesibilidad: ARIA, Contrastes</li>
-              </ul>
-              <h3>Formatos (Ordenada)</h3>
-              <ol class="styled-list">
-                <li>Imágenes (WebP, AVIF)</li>
-                <li>Video (MP4, WebM)</li>
-                <li>Audio (MP3, OGG)</li>
-              </ol>
-              <h3 style="margin-top: 1.5rem">Glosario (Definición)</h3>
-              <dl class="definition-list">
-                <dt>HTML5</dt>
-                <dd>Lenguaje de marcado para estructurar la web.</dd>
-                <dt>CSS3</dt>
-                <dd>Hojas de estilo para el diseño visual y adaptativo.</dd>
-                <dt>A11y</dt>
-                <dd>Accesibilidad e inclusión en el desarrollo web.</dd>
-              </dl>
-            </div>
-            <div class="feature-media">
-              <h3>Video Incrustado</h3>
-              <div class="video-container">
-                <video controls poster="https://picsum.photos/600/350?random=4">
-                  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                  Tu navegador no soporta el video.
-                </video>
+              <!-- Navigation Labels -->
+              <div class="tabs-nav">
+                <label for="tab1" class="tab-label">Cards Clásicas</label>
+                <label for="tab2" class="tab-label">Cards Giratorias (Flip)</label>
               </div>
-            </div>
-          </div>
-        </section>
 
-        <section id="data" class="data-section">
-          <header class="section-header">
-            <h2>Tabla de Datos</h2>
-          </header>
-          <div class="table-responsive">
-            <table class="data-table">
-              <caption>
-                Estadísticas Ficticias
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col">Navegador</th>
-                  <th scope="col">Motor</th>
-                  <th scope="col">Soporte</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Chrome</th>
-                  <td>Blink</td>
-                  <td><span class="status-badge success">Excelente</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Safari</th>
-                  <td>WebKit</td>
-                  <td><span class="status-badge success">Bueno</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Firefox</th>
-                  <td>Gecko</td>
-                  <td><span class="status-badge success">Excelente</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section id="contact" class="form-section">
-          <header class="section-header">
-            <h2>Formularios de Contacto Avanzado</h2>
-          </header>
-          <form action="#" method="GET" class="contact-form">
-            <fieldset>
-              <legend>Información Personal</legend>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Nombre <span class="required">*</span></label>
-                  <input type="text" id="name" name="name" required />
-                </div>
-                <div class="form-group">
-                  <label for="email">Email <span class="required">*</span></label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="dob">Nacimiento</label>
-                  <input type="date" id="dob" name="dob" />
-                </div>
-                <div class="form-group">
-                  <label for="website">Web</label>
-                  <input type="url" id="website" name="website" />
-                </div>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Preferencias y Mensaje</legend>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="topic">Motivo</label>
-                  <select id="topic" name="topic">
-                    <option value="" disabled selected>Selecciona...</option>
-                    <optgroup label="Cliente">
-                      <option value="soporte">Soporte</option>
-                      <option value="ventas">Ventas</option>
-                    </optgroup>
-                    <optgroup label="General">
-                      <option value="otros">Otros</option>
-                    </optgroup>
-                  </select>
+              <!-- Content Panels -->
+              <div class="tabs-content">
+                <p class="paragraph">Tenemos un componente tab que funciona sin JavaScript.</p>
+                <p class="paragraph">Dentro de cada tab añadimos cards.</p>
+                <!-- Tab 1: Clásicas -->
+                <div id="content-tab1" class="tab-panel">
+                  <div class="grid-cards">
+                    <article class="card">
+                      <figure>
+                        <img src="https://picsum.photos/400/250?random=1" alt="Card" />
+                        <figcaption>Card</figcaption>
+                      </figure>
+                      <div class="card-content">
+                        <h3>Maquetación de Card</h3>
+                        <p class="paragraph">Aquí tenemos un grid de cards con imagen, título, texto y link</p>
+                        <a href="#" class="read-more">Leer artículo &rarr;</a>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <figure>
+                        <img src="https://picsum.photos/400/250?random=2" alt="CSS Grid" />
+                        <figcaption>Estilos</figcaption>
+                      </figure>
+                      <div class="card-content">
+                        <h3>CSS</h3>
+                        <p class="paragraph">
+                          Al hacer hover sobre la card se mueve la tarjeta ligeramente hacia arriba y la imagen se amplía un poco.
+                        </p>
+                        <a href="#" class="read-more">Leer artículo &rarr;</a>
+                      </div>
+                    </article>
+                  </div>
                 </div>
 
-                <div class="form-group options-group">
-                  <span>Urgencia:</span>
-                  <div class="radio-group">
-                    <label class="radio-label"> <input type="radio" name="urgency" value="baja" checked /> Baja </label>
-                    <label class="radio-label"> <input type="radio" name="urgency" value="alta" /> Alta </label>
+                <!-- Tab 2: Flip Cards -->
+                <div id="content-tab2" class="tab-panel">
+                  <div class="grid-cards">
+                    <article class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <figure>
+                            <img src="https://picsum.photos/400/250?random=4" alt="Flip 1" />
+                            <figcaption>Frente 1</figcaption>
+                          </figure>
+                          <div class="card-content">
+                            <h3>Descubre el reverso</h3>
+                            <p class="paragraph">Pasa el ratón (hover) para ver la parte trasera girando.</p>
+                          </div>
+                        </div>
+                        <div class="flip-card-back">
+                          <div class="card-content">
+                            <h3>¡Cara oculta!</h3>
+                            <p class="paragraph">Efecto flip</p>
+                            <a href="#" class="btn btn-secondary" style="margin-top: auto">Ver más</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <figure>
+                            <img src="https://picsum.photos/400/250?random=5" alt="Flip 2" />
+                            <figcaption>Frente 2</figcaption>
+                          </figure>
+                          <div class="card-content">
+                            <h3>Interactividad CSS</h3>
+                            <p class="paragraph">Las animaciones en 3D enriquecen la experiencia web.</p>
+                          </div>
+                        </div>
+                        <div class="flip-card-back">
+                          <div class="card-content">
+                            <h3>Rotación Y</h3>
+                            <p class="paragraph">La carta rota sobre el eje Y.</p>
+                            <a href="#" class="btn btn-primary" style="margin-top: auto">Fantástico</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
                   </div>
                 </div>
               </div>
-
-              <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-              </div>
-
-              <div class="form-group form-group-checkbox mt-sm">
-                <label class="checkbox-label">
-                  <input type="checkbox" name="newsletter" value="yes" checked />
-                  Boletín semanal
-                </label>
-              </div>
-              <div class="form-group form-group-checkbox">
-                <label class="checkbox-label">
-                  <input type="checkbox" name="terms" value="accepted" required />
-                  Acepto política de privacidad <span class="required">*</span>
-                </label>
-              </div>
-            </fieldset>
-
-            <div class="form-actions">
-              <button type="reset" class="btn btn-secondary btn-outline">Restablecer</button>
-              <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
-          </form>
-        </section>
+          </section>
+          <!-- Carrusel -->
+          <section class="reveal-on-scroll">
+            <header>
+              <h2 class="title-md">Carrusel</h2>
+              <p class="paragraph">Crea un carrusel totalmente funcional solo con HTML y CSS</p>
+              <p class="paragraph">Tendrá tanto bullets como botones para desplazar las imágenes</p>
+            </header>
+            <!-- Carrusel Puro CSS -->
+            <div class="carousel-container" aria-label="Carrusel de imágenes">
+              <input type="radio" name="carousel" id="carousel-slide1" class="carousel-radio" checked />
+              <input type="radio" name="carousel" id="carousel-slide2" class="carousel-radio" />
+              <input type="radio" name="carousel" id="carousel-slide3" class="carousel-radio" />
+              <input type="radio" name="carousel" id="carousel-slide4" class="carousel-radio" />
+              <input type="radio" name="carousel" id="carousel-slide5" class="carousel-radio" />
+
+              <div class="carousel-slides">
+                <div class="carousel-slide">
+                  <img src="https://picsum.photos/800/400?random=30" alt="Slide 1" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://picsum.photos/800/400?random=31" alt="Slide 2" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://picsum.photos/800/400?random=32" alt="Slide 3" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://picsum.photos/800/400?random=33" alt="Slide 4" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://picsum.photos/800/400?random=34" alt="Slide 5" />
+                </div>
+              </div>
+
+              <div class="carousel-arrows">
+                <label for="carousel-slide5" class="carousel-arrow carousel-arrow-prev arrow-for-slide1" aria-label="Ir a diapositiva anterior"
+                  >&#10094;</label
+                >
+                <label for="carousel-slide2" class="carousel-arrow carousel-arrow-next arrow-for-slide1" aria-label="Ir a diapositiva siguiente"
+                  >&#10095;</label
+                >
+
+                <label for="carousel-slide1" class="carousel-arrow carousel-arrow-prev arrow-for-slide2" aria-label="Ir a diapositiva anterior"
+                  >&#10094;</label
+                >
+                <label for="carousel-slide3" class="carousel-arrow carousel-arrow-next arrow-for-slide2" aria-label="Ir a diapositiva siguiente"
+                  >&#10095;</label
+                >
+
+                <label for="carousel-slide2" class="carousel-arrow carousel-arrow-prev arrow-for-slide3" aria-label="Ir a diapositiva anterior"
+                  >&#10094;</label
+                >
+                <label for="carousel-slide4" class="carousel-arrow carousel-arrow-next arrow-for-slide3" aria-label="Ir a diapositiva siguiente"
+                  >&#10095;</label
+                >
+
+                <label for="carousel-slide3" class="carousel-arrow carousel-arrow-prev arrow-for-slide4" aria-label="Ir a diapositiva anterior"
+                  >&#10094;</label
+                >
+                <label for="carousel-slide5" class="carousel-arrow carousel-arrow-next arrow-for-slide4" aria-label="Ir a diapositiva siguiente"
+                  >&#10095;</label
+                >
+
+                <label for="carousel-slide4" class="carousel-arrow carousel-arrow-prev arrow-for-slide5" aria-label="Ir a diapositiva anterior"
+                  >&#10094;</label
+                >
+                <label for="carousel-slide1" class="carousel-arrow carousel-arrow-next arrow-for-slide5" aria-label="Ir a diapositiva siguiente"
+                  >&#10095;</label
+                >
+              </div>
+
+              <div class="carousel-nav">
+                <label for="carousel-slide1" class="carousel-dot" aria-label="Ir a diapositiva 1"></label>
+                <label for="carousel-slide2" class="carousel-dot" aria-label="Ir a diapositiva 2"></label>
+                <label for="carousel-slide3" class="carousel-dot" aria-label="Ir a diapositiva 3"></label>
+                <label for="carousel-slide4" class="carousel-dot" aria-label="Ir a diapositiva 4"></label>
+                <label for="carousel-slide5" class="carousel-dot" aria-label="Ir a diapositiva 5"></label>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="main-footer">
-    <div class="container footer-content">
-      <div class="footer-info">
-        <h4>WebLab UI</h4>
-        <p>Demostración integral de HTML5 y CSS3.</p>
+    <footer class="main-footer reveal-on-scroll">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <h4>Crafting the Modern Web</h4>
+          <p>Demostración integral de HTML5 y CSS3.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#articles">Blog</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <address>
+            <p class="paragraph">GDN-e</p>
+            <p class="paragraph">NTT DATA</p>
+          </address>
+        </div>
       </div>
-      <div class="footer-links">
-        <h4>Enlaces</h4>
-        <ul>
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#articles">Blog</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="paragraph">&copy; <time datetime="2026">2026</time> HTML & CSS mastery</p>
+        </div>
       </div>
-      <div class="footer-contact">
-        <h4>Contacto</h4>
-        <address>
-          <p>Calle Principal, 1<br />Madrid, 28001</p>
-          <p>Email: hello@weblab.test</p>
-        </address>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; <time datetime="2026">2026</time> WebLab. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script>
-    const themeSelect = document.getElementById('theme-select');
-    const themeKey = 'preferencia-tema-weblab';
+    <script>
+      const themeSelect = document.getElementById('theme-select');
+      const themeKey = 'preferencia-tema-weblab';
 
-    function applyTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-    }
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
 
-    function changeTheme(theme) {
-      applyTheme(theme);
-      localStorage.setItem(themeKey, theme);
-      themeSelect.value = theme;
-    }
+      function changeTheme(theme) {
+        applyTheme(theme);
+        localStorage.setItem(themeKey, theme);
+        themeSelect.value = theme;
+      }
 
-    function initTheme() {
-      const savedTheme = localStorage.getItem(themeKey) || 'system';
-      changeTheme(savedTheme);
-    }
+      function initTheme() {
+        const savedTheme = localStorage.getItem(themeKey) || 'system';
+        changeTheme(savedTheme);
+      }
 
-    // Iniciar el tema al cargar
-    initTheme();
+      // Iniciar el tema al cargar
+      initTheme();
 
-    // Toggle menú hamburguesa
-    const navToggle = document.querySelector('.nav-toggle');
-    const mainNav = document.querySelector('.main-nav');
+      // Toggle menú hamburguesa
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('.main-nav');
 
-    navToggle.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', isOpen);
-    });
-  </script>
-</body>
+      navToggle.addEventListener('click', () => {
+        const isOpen = mainNav.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
 
+      // Simple Observer Fallback for Scroll Reveal
+      // Just in case view-timeline is not supported
+      if (!window.CSS || !CSS.supports('animation-timeline', 'view()')) {
+        const observer = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-active');
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+          el.style.opacity = '0';
+          el.style.transition = 'all 0.8s ease-out';
+          observer.observe(el);
+        });
+
+        // Add this specific rule to make reveal-active work
+        const style = document.createElement('style');
+        style.innerHTML = `
+          .reveal-active {
+            opacity: 1 !important;
+            transform: translateY(0) scale(1) !important;
+            filter: blur(0) !important;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    </script>
+  </body>
 </html>
