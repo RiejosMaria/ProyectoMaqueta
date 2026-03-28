@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero-section {
     background: var(--surface);
-    color: var(--text-light);
+    color: var(--text);
     margin-top: 20px;
     margin-bottom: 40px;
     padding: 8rem 0;
@@ -16,7 +16,7 @@
 
 .hero-subtitle {
     display: block;
-    color: #818cf8;
+    color: var(--primary);
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
@@ -29,13 +29,12 @@
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    color: var(--text-light);
-    background: none;
-    -webkit-text-fill-color: var(--title);
+    color: var(--title);
 }
 
 .text-gradient {
-    background: linear-gradient(to right, #818cf8, #f472b6);
+    line-height: 1.5;
+    background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -44,7 +43,7 @@
 
 .hero-description {
     font-size: 1.2rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 2.5rem;
     max-width: 650px;

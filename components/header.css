@@ -1,10 +1,11 @@
 /* Header y navegación */
 .main-header {
     background: var(--surface);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid var(--border);
 }
 
 .header-container {
@@ -14,9 +15,15 @@
     height: 75px;
 }
 
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
 .logo h1 {
     color: var(--primary);
     font-size: 1.8rem;
+    font-weight: 800;
 }
 
 .main-nav {
@@ -34,6 +41,7 @@
 .main-nav a {
     color: var(--text-muted);
     font-weight: 600;
+    transition: 0.3s;
 }
 
 .main-nav a:hover {
@@ -43,10 +51,11 @@
 /* Hamburger Menu (Responsive) */
 .nav-toggle {
     display: none;
-    background: none;
-    border: none;
+    background: var(--surface-hover);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.6rem;
 }
 
 .hamburger,
@@ -54,8 +63,8 @@
 .hamburger::after {
     content: '';
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 22px;
+    height: 2px;
     background-color: var(--text);
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -64,12 +73,12 @@
 
 .hamburger::before {
     position: absolute;
-    top: -8px;
+    top: -7px;
 }
 
 .hamburger::after {
     position: absolute;
-    top: 8px;
+    top: 7px;
 }
 
 .nav-toggle[aria-expanded="true"] .hamburger {
@@ -86,7 +95,7 @@
     top: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
     .nav-toggle {
         display: block;
     }
@@ -99,29 +108,36 @@
         background: var(--surface);
         flex-direction: column;
         align-items: flex-start;
-        padding: 1.5rem;
-        gap: 1.5rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transform: translateY(-120%);
-        transition: transform 0.3s ease;
+        padding: 2rem;
+        gap: 2rem;
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-150%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-bottom: 1px solid var(--border);
+        visibility: hidden;
     }
 
     .main-nav.nav-open {
         transform: translateY(0);
+        visibility: visible;
     }
 
     .main-nav ul {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         width: 100%;
     }
 
     .main-nav a {
         display: block;
         width: 100%;
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
     }
 
     .theme-switcher {
         width: 100%;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
     }
 }

@@ -4,9 +4,10 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     background: var(--surface);
-    padding: 2rem;
-    border-radius: var(--radius);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 @media(min-width:768px) {
@@ -17,14 +18,15 @@
 
 .custom-list {
     list-style: none;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .custom-list li {
-    padding-left: 1.5rem;
+    padding-left: 2rem;
     position: relative;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: var(--text);
+    font-weight: 500;
 }
 
 .custom-list li::before {
@@ -32,31 +34,33 @@
     position: absolute;
     left: 0;
     color: var(--success);
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .styled-list {
-    margin-left: 1.25rem;
+    margin-left: 1.5rem;
     color: var(--text-muted);
 }
 
 .styled-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .definition-list {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .definition-list dt {
-    font-weight: bold;
+    font-weight: 700;
     color: var(--primary);
-    margin-top: 0.75rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
 }
 
 .definition-list dd {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     color: var(--text-muted);
+    font-style: italic;
 }
 
 .video-container {
@@ -64,8 +68,10 @@
     overflow: hidden;
     background: #000;
     margin-bottom: 0.5rem;
+    box-shadow: var(--shadow-lg);
 }
 
 .video-container video {
     width: 100%;
+    display: block;
 }

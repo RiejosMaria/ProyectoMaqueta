@@ -14,13 +14,13 @@
 
 .btn-primary {
     background: var(--primary);
-    color: var(--text-light);
+    color: var(--text-on-primary);
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .btn-secondary {
@@ -30,38 +30,40 @@
 }
 
 .btn-secondary:hover {
-    background: var(--text-muted);
+    background: var(--surface-hover);
+    border-color: var(--primary);
 }
 
 .btn-hero-primary {
-    background: #818cf8;
-    color: white;
+    background: var(--primary);
+    color: var(--text-on-primary);
     padding: 0.8rem 2rem;
-    border-radius: 8px;
+    border-radius: var(--radius);
     font-weight: 600;
     border: none;
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(129, 140, 248, 0.4);
+    box-shadow: 0 0 20px rgba(67, 56, 202, 0.4);
     transition: all 0.3s ease;
 }
 
 .btn-hero-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(129, 140, 248, 0.6);
+    box-shadow: 0 0 30px rgba(67, 56, 202, 0.6);
 }
 
 .btn-hero-secondary {
-    background: rgba(30, 41, 59, 0.3);
-    color: #f8fafc;
+    background: var(--glass-bg);
+    color: var(--text);
     padding: 0.8rem 2rem;
-    border-radius: 8px;
+    border-radius: var(--radius);
     font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--primary);
     cursor: pointer;
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .btn-hero-secondary:hover {
-    background: rgba(30, 41, 59, 0.5);
-    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(67, 56, 202, 0.6);
 }

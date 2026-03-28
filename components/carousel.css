@@ -3,9 +3,10 @@
     position: relative;
     width: 100%;
     margin-top: 3rem;
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
 }
 
 .carousel-radio {
@@ -22,7 +23,7 @@
 .carousel-slides {
     display: flex;
     width: 500%;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carousel-slide {
@@ -32,31 +33,34 @@
 
 .carousel-slide img {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     display: block;
 }
 
 .carousel-nav {
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    z-index: 10;
 }
 
 .carousel-dot {
     width: 12px;
     height: 12px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
     cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .carousel-dot:hover {
     background: #fff;
+    transform: scale(1.2);
 }
 
 /* Logic for transforming the slides */
@@ -87,6 +91,8 @@
 #carousel-slide4:checked~.carousel-nav label[for="carousel-slide4"],
 #carousel-slide5:checked~.carousel-nav label[for="carousel-slide5"] {
     background: #fff;
+    width: 30px;
+    border-radius: 6px;
 }
 
 /* Keyboard access */
@@ -96,7 +102,7 @@
 #carousel-slide4:focus-visible~.carousel-nav label[for="carousel-slide4"],
 #carousel-slide5:focus-visible~.carousel-nav label[for="carousel-slide5"] {
     outline: 2px solid #fff;
-    outline-offset: 2px;
+    outline-offset: 4px;
 }
 
 /* Carousel Arrows */
@@ -104,33 +110,36 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.7);
+    width: 48px;
+    height: 48px;
+    background: var(--glass-bg);
     color: var(--primary);
     border-radius: 50%;
     text-align: center;
-    line-height: 38px;
+    line-height: 46px;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;
+    transition: all 0.3s ease;
     display: none;
     z-index: 10;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
 }
 
 .carousel-arrows label:hover,
 .carousel-arrows label:focus-visible {
-    background: #fff;
-    color: var(--primary-dark);
+    background: var(--primary);
+    color: var(--text-on-primary);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .carousel-arrow-prev {
-    left: 15px;
+    left: 20px;
 }
 
 .carousel-arrow-next {
-    right: 15px;
+    right: 20px;
 }
 
 #carousel-slide1:checked~.carousel-arrows .arrow-for-slide1,

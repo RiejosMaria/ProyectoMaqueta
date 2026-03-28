@@ -1,8 +1,9 @@
 /* Footer */
 .main-footer {
-    background: #1e293b;
-    color: #f1f5f9;
+    background: var(--surface);
+    color: var(--text);
     padding-top: 4rem;
+    border-top: 1px solid var(--border);
 }
 
 .footer-content {
@@ -18,10 +19,11 @@
     display: inline-block;
     padding-bottom: 0.25rem;
     font-size: 1.1rem;
+    color: var(--title);
 }
 
 .footer-info p {
-    color: #94a3b8;
+    color: var(--text-muted);
 }
 
 .footer-links ul {
@@ -33,17 +35,19 @@
 }
 
 .footer-links a {
-    color: #94a3b8;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #ffffff;
+    color: var(--primary);
     padding-left: 5px;
 }
 
 .footer-contact address {
     font-style: normal;
-    color: #94a3b8;
+    color: var(--text-muted);
 }
 
 .footer-contact address p {
@@ -51,13 +55,13 @@
 }
 
 .footer-bottom {
-    background: #0f172a;
+    background: var(--surface-hover);
     text-align: center;
     padding: 1.5rem 0;
     font-size: 1rem;
-    border-top: 1px solid #334155;
+    border-top: 1px solid var(--border);
 }
 
 .footer-bottom p {
-    color: #94a3b8;
+    color: var(--text-muted);
 }
