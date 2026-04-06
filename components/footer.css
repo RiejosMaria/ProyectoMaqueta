@@ -55,7 +55,7 @@
 }
 
 .footer-bottom {
-    background: var(--surface-hover);
+    background: var(--bg);
     text-align: center;
     padding: 1.5rem 0;
     font-size: 1rem;
