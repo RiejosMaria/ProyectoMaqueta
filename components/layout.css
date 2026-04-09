@@ -12,6 +12,20 @@
     }
 }
 
+@media (max-width: 768px) {
+    .main-layout {
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-layout {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+}
+
 .content-wrapper>section {
     margin-bottom: 5rem;
 }

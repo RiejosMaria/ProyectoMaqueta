@@ -44,3 +44,13 @@
 #hero.reveal-on-scroll {
   animation-range: entry 0% cover 10%;
 }
+
+/* Disable reveal animations on mobile to avoid blur issues */
+@media (max-width: 768px) {
+  .reveal-on-scroll {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}

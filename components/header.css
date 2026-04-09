@@ -55,7 +55,7 @@
     border: 1px solid var(--border);
     border-radius: var(--radius);
     cursor: pointer;
-    padding: 0.6rem;
+    padding: 16px 9px;
 }
 
 .hamburger,
@@ -63,22 +63,22 @@
 .hamburger::after {
     content: '';
     display: block;
-    width: 22px;
+    width: 16px;
     height: 2px;
     background-color: var(--text);
-    border-radius: 2px;
+    border-radius: 1px;
     transition: all 0.3s ease;
     position: relative;
 }
 
 .hamburger::before {
     position: absolute;
-    top: -7px;
+    top: -6px;
 }
 
 .hamburger::after {
     position: absolute;
-    top: 7px;
+    top: 6px;
 }
 
 .nav-toggle[aria-expanded="true"] .hamburger {
