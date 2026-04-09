@@ -16,7 +16,7 @@
 }
 
 .theme-select {
-    padding: 0.35rem 0.65rem;
+    padding: 0.4rem 2.5rem 0.6rem 0.75rem;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background-color: var(--surface);
@@ -27,6 +27,13 @@
     outline: none;
     transition: all 0.3s ease;
     max-width: 200px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3e%3cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
 }
 
 .theme-select:hover,
